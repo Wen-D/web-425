@@ -1,0 +1,38 @@
+<!-- start nav bar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <!-- home page -->
+    <li class="nav-item active">
+      <a class="nav-link" routerLink='/home'>Home</a>
+    </li>
+    <!-- about page -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink='/about'>About</a>
+    </li>
+    <!-- contact page -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink='/contact'>Contact Us</a>
+    </li>
+  </ul>
+</nav>
+<!-- end nav bar -->
+
+<!--page with dynamic content-->
+<div role="main" class="container">
+
+  <br/>
+  <br/>
+
+  <h2>Exercise 2.2 - Navigation</h2>
+
+  <br/>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="alert alert-success" role="alert">
+       <!--tags where content is loaded dynamically-->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
