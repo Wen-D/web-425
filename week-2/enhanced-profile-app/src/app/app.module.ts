@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  enhanced profile
+; Author: Professor Krasso
+; Date:   10 January 2021
+; Modified by: Wendy leon
+; Description: enhanced profile
+;===========================================
+*/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

@@ -15,7 +15,7 @@
 <br><br>
 
 <div class="container">
-
+  <!-- if logged in-->
   <div class="main-body"  class="row" *ngIf= "isLoggedIn; else showError">
     <h2>{{ assignment }}</h2>
     <div _ngcontent-upi-c11="" class="row gutters-sm" *ngIf='isLoggedIn; else showError'>
@@ -38,6 +38,7 @@
       </div>
     </div>
   </div>
+  <!-- if not logged in-->
   <ng-template #showError>
     <div class="row">
       <div class="col-sm-12">

@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  enhanced profile
+; Author: Professor Krasso
+; Date:   10 January 2021
+; Modified by: Wendy leon
+; Description: enhanced profile
+;===========================================
+*/
 import { Component, OnInit } from '@angular/core';
 
 export default class Person{

@@ -8,7 +8,7 @@
 */
 
 import { Component } from '@angular/core';
-
+// selector tag array set up with document info
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
