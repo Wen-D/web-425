@@ -1,3 +1,11 @@
+/*============================================
+; Title:  composer app
+; Author: Professor Krasso
+; Date:   10 January 2021
+; Modified by: Wendy Leon
+; Description: composer app
+;===========================================
+*/
 
 // composer interface from path
 import { IComposer } from './composer.interface';

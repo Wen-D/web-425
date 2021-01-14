@@ -13,7 +13,7 @@ import {IComposer} from '../composer.interface';
 import {Composer} from '../composer.class';
 
 
-
+// maps to selector and component
 
 @Component({
   selector: 'app-composer-list',
