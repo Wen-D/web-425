@@ -7,7 +7,7 @@
 ;===========================================
 */
 import { Component, OnInit } from '@angular/core';
-
+// about selector and paths
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',

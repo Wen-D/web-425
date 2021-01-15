@@ -7,9 +7,9 @@
 ;===========================================
 */
 import { Component, OnInit } from '@angular/core';
-
+//selector and path
 @Component({
-  selector: 'app-contact-us',
+  selector: 'app-contact',
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.css']
 })

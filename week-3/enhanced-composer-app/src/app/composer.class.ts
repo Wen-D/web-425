@@ -1,65 +1,40 @@
 /*============================================
-; Title:  composer app
+; Title:  enhanced composer list
 ; Author: Professor Krasso
-; Date:   10 January 2021
+; Date:   14 January 2021
 ; Modified by: Wendy Leon
 ; Description: composer app
 ;===========================================
 */
+// imports from externall files
 
-// composer interface from path
-import { IComposer } from './composer.interface';
+import {IComposer} from './composer.interface';
 
-//export class composer
+// composer class with constructor with composer array of objects
 export class Composer {
-//composers array
-   composers: Array<IComposer>;
 
-//constructor method
-   constructor() {
-      // sends list of parameters to constructor - id, name, genre
-      this.composers = [
-        // composer objects follows format icomposer interface
-        {
-          composerId: 100,
-          fullName: "Ludwig van Beethoven",
-          genre: "Classical"
-        },
-        {
-          composerId: 101,
-          fullName: "Johann Sebastian Bach",
-          genre: "Classical"
-        },
-        {
-          composerId: 102,
-          fullName: "Wolfgang Amadeus Mozart",
-          genre: "Classical"
-        },
-        {
-          composerId: 103,
-          fullName: "Johannes Brahms",
-          genre: "Classical"
-        },
-        {
-          composerId: 104,
-          fullName: "Joseph Haydn",
-          genre: "Classical"
-        },
-      ]
+  composers: Array<IComposer>;
+
+  constructor() {
+    this.composers = [
+      {composerId: 100, fullName: 'Ludwig van Beethoven', genre: 'Classical'},
+      {composerId: 101, fullName: 'Wolfgang Amadeus Mozart', genre: 'Classical'},
+      {composerId: 102, fullName: 'Richard Wagner', genre: 'Classical'},
+      {composerId: 103, fullName: 'Claude Debussy', genre: 'Classical'},
+      {composerId: 104, fullName: 'Frederic Chopin', genre: 'Classical'}
+    ]
   }
-   // functions that act as point of entry
-   getComposers(){
-    //returns composer objects from array
+
+  // data access point for composer array objects
+  getComposers(){
     return this.composers;
   }
-  // loop iterates through array and returns composer if composer matches id
-  getComposer(composerId: number){
-    for (let composer of this.composers){
-      if(composer.composerId === composerId){
-          return composer;
+  // For looping through composer list searches composer by ID number
+  getComposer(composerId: number) {
+    for (let composer of this.composers) {
+      if (composer.composerId === composerId) {
+        return composer;
       }
     }
   }
 }
-
-

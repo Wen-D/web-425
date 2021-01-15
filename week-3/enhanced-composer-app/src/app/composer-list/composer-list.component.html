@@ -4,6 +4,7 @@
       <!-- composers table header -->
       <thead class="thead-dark">
         <tr>
+          <th scope="col">Composer ID</th>
           <th scope="col">Full name</th>
           <th scope="col">Genre</th>
         </tr>
@@ -11,6 +12,10 @@
       <tbody *ngFor="let composer of composers">
         <tr>
           <!-- composers table contents -->
+          <td scope="row">
+            <a routerLink="/composer-details/{{ composer.composerId }}">
+              {{ composer.composerId }}
+            </a>
           <td scope="row">{{ composer.fullName }}</td>
           <td>{{composer.genre}}</td>
         </tr>

@@ -1,12 +1,13 @@
 /*============================================
-; Title:  Composer app
+; Title:  composer list
 ; Author: Professor Krasso
-; Date:   10 January 2021
+; Date:   14 January 2021
 ; Modified by: Wendy Leon
-; Description: composer app
+; Description: composer list
 ;===========================================
 */
 
+//external files import
 import { Component } from '@angular/core';
 
 @Component({
@@ -14,6 +15,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+// assignment name var
 export class AppComponent {
-  title = 'composer-app';
+  assignment: string = 'Exercise 3.2 - Passing Data to Routes, Part 1';
 }

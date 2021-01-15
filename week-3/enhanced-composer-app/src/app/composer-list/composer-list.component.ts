@@ -6,14 +6,10 @@
 ; Description: composer app
 ;===========================================
 */
+//file imports from external files
 import { Component, OnInit } from '@angular/core';
-// import IComposer interface
-import {IComposer} from '../composer.interface';
-//import composer class
-import {Composer} from '../composer.class';
-
-
-// maps to selector and component
+import { IComposer } from '../composer.interface';
+import { Composer } from '../composer.class';
 
 @Component({
   selector: 'app-composer-list',
@@ -21,11 +17,12 @@ import {Composer} from '../composer.class';
   styleUrls: ['./composer-list.component.css']
 })
 export class ComposerListComponent implements OnInit {
-//composer property
+
   composers: Array<IComposer>;
-  constructor(){
-       this.composers = new Composer().getComposers();
-  }
+  //the constructor method - creates an instance of the composer class
+  constructor() {
+    this.composers = new Composer().getComposers();
+   }
 
   ngOnInit(): void {
   }

@@ -1,18 +1,16 @@
-
 /*============================================
-; Title:  composer app
+; Title:  enhanced composer app
 ; Author: Professor Krasso
-; Date:   10 January 2021
+; Date:   14 January 2021
 ; Modified by: Wendy Leon
-; Description: composer app
+; Description: composer lists
 ;===========================================
 */
-// composer interface class exports composer fields id name and genre
-//
+
+//IComposer interface with 3 fields
 
 export interface IComposer {
-   composerId: number;
-   fullName: string;
-   genre: string;
-
+  composerId: number;
+  fullName: string;
+  genre: string;
 }
