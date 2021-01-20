@@ -16,6 +16,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './my-image.component.html',
   styleUrls: ['./my-image.component.css']
 })
+
+
 export class MyImageComponent implements OnInit {
 
   constructor() { }

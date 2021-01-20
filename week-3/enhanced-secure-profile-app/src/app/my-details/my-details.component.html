@@ -5,6 +5,7 @@
   <li class="list-group-item">Favorite Food: {{ myProfile.favoriteFood }}</li>
   <li class="list-group-item">Favorite Color: {{ myProfile.favoriteColor }}</li>
   <li class="list-group-item"> Keywords:
+    <!-- for loop with profile keywords -->
     <span *ngFor = "let word of myProfile.keywords"> {{ word }} </span>
   </li>
 </ul>

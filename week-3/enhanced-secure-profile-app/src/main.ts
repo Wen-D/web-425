@@ -1,3 +1,11 @@
+/*============================================
+; Title:  secure profile
+; Author: Professor Krasso
+; Date:   15 January 2021
+; Modified by: Wen-D
+; Description: secure profile
+;===========================================
+*/
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
