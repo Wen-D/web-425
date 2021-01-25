@@ -21,24 +21,23 @@ import { Observable } from 'rxjs';
   styleUrls: ['./composer-list.component.css']
 })
 export class ComposerListComponent implements OnInit {
-
+  //make icomposer array an observable
   composers: Observable<IComposer[]>;
   //
   txtSearchControl = new FormControl('');
 
   //the constructor method - creates an instance of the composer class
 //New instance of composer service using dependency injection
-  constructor(private ComposerService: ComposerService) {
-    this.composers = this.ComposerService.getComposers();
+  constructor(private composerService: ComposerService) {
+    this.composers = this.composerService.getComposers();
      // subscribe method passing filter value / debounce time is the time interval
      this.txtSearchControl.valueChanges.pipe(debounceTime(500)).subscribe(val => this.filterComposers(val));
-    }
-   ngOnInit(): void {
    }
 
+  ngOnInit(): void {
+  }
   // JS alert box with the observable value in txtSearchControl
   filterComposers(name: string) {
-    this.composers = this.ComposerService.filterComposer(name);
+    this.composers = this.composerService.filterComposer(name);
   }
-
 }

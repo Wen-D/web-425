@@ -29,6 +29,7 @@ export class Composer {
   getComposers(){
     return this.composers;
   }
+
   // For looping through composer list searches composer by ID number
   getComposer(composerId: number) {
     for (let composer of this.composers) {
@@ -36,5 +37,6 @@ export class Composer {
         return composer;
       }
     }
+    return false;
   }
 }

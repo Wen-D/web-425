@@ -20,14 +20,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ComposerDetailsComponent implements OnInit {
 // fields with composer details
+
   composerId: number;
   composer: IComposer;
-
   // route builds the path for composer pages by id
 
   constructor(private route: ActivatedRoute) {
     this.composerId = parseInt(this.route.snapshot.paramMap.get('composerId'),10);
 
+    //This will check if composerId has value,
     if (this.composerId) {
       this.composer = new Composer().getComposer(this.composerId);
     }

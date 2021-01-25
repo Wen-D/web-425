@@ -3,14 +3,14 @@
 ; Author: Professor Krasso
 ; Date:   14 January 2021
 ; Modified by: Wendy Leon
-; Edited: 20 Jan 2021
+; Edited: 25 Jan 2021
 ; Description: composer app
 ;===========================================
 */
 // imports from externall files
 import { Injectable } from '@angular/core';
 import { IComposer } from './composer.interface';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs'
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -20,6 +20,7 @@ import { map } from 'rxjs/operators';
 
 // composer class with constructor with composer array of objects
 export class ComposerService {
+
   composers: Array<IComposer>;
 
   constructor() {
@@ -36,6 +37,7 @@ export class ComposerService {
   getComposers(): Observable<IComposer[]> {
     return of(this.composers);
   }
+
   // For looping through composer list searches composer by ID number
   getComposer(composerId: number) {
     for (let composer of this.composers) {
@@ -44,14 +46,15 @@ export class ComposerService {
       }
     }
   }
-// filter functions used: pipe, map, filter
-//function that returns the observable array of composer objects
+
+
+
   filterComposer(name: string): Observable<IComposer[]> {
-      return of(this.composers).pipe(
-        map(composers =>
-          composers.filter(composer => composer.fullName.toLowerCase().indexOf(name) > -1))
-      )
-    }
+    // functions chained together using the pipe operator
+    return of(this.composers).pipe(
+      // map function returns new array with composers
+      map(composers =>
+        composers.filter(composer => composer.fullName.toLowerCase().indexOf(name) > -1))
+    )
   }
-
-
+}
