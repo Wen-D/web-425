@@ -38,7 +38,7 @@ export class BookListComponent implements OnInit {
   //function receives isbn and finds book match and logs it to the console
   showBookDetails(isbn: string) {
     this.book = this.booksService.getBook(isbn);
-
+    // dialogRef object assigned to dialog.open() function
     const dialogRef = this.dialog.open(BookDetailsDialogComponent, {
       data: { book: this.book },
       disableClose: true,
@@ -47,7 +47,7 @@ export class BookListComponent implements OnInit {
 
 
     console.log(this.book);
-    // Call the afterClosed() function and set the book variable to null
+    // Calling the afterClosed() function and setting the book variable to null
     dialogRef.afterClosed().subscribe(
       result => {
         if (result === 'confirm') {
