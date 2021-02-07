@@ -1,0 +1,9 @@
+.logo { /* logo styling */
+  margin-top: 5px;
+}
+
+.main-container { /* main container styling */
+  padding-top: 25px;
+  width: 80%;
+  margin: 0 auto;
+}
