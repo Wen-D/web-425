@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!--logo ---->
+    <div class="logo"></div>
+      <img src="./assets/gpa-calculator-app.png" height="80" />
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <!--home button ---->
+        <button mat-button routerLink="/">Home</button>
+        <!--sign out button w/ onclick event ---->
+        <button mat-button (click)="signOut()">Sign Out</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="main-container">
+      <!-- Assignment Title---->
+      <mat-card-title>{{ assignment }}</mat-card-title>
+      <br /><br />
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
